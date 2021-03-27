@@ -13,13 +13,12 @@ function tableau()
 function isConsecutiveOrNot($arr)
 {
     for ($i = 0; $i < count($arr) - 1; $i++) {
-
-        if ($arr[$i] == ($arr[$i + 1]) - 1) {
-            return "it's consecutive";
-        } else {
+        $isConsec = $arr[$i] == ($arr[$i + 1]) - 1;
+        if (!$isConsec) {
             return "it's not consecutive";
-        }
+        }       
     }
+    echo "it's consecutive";
 }
 
 tableau();
